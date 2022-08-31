@@ -1,0 +1,54 @@
+.Wrapper {
+    margin-left: 719px;
+}
+
+.FeedContainer{
+    border: 1px solid black;
+    width: 598px;
+    height: auto;
+    padding: 10px 16px;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.username {
+ padding-top: 5px;
+ margin-left: 10px;
+ 
+}
+
+.description {
+    padding-top: 5px;
+    margin-left: 58px;
+    
+}
+
+.defaultUserLogo{
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: 0.5rem;
+
+}
+
+.ProfileImage{
+    width:48px;
+    height:48px;
+    background-color: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.feedimage {
+    width: 502px;
+    border-radius: 20px;
+    margin-left: 58px;
+    margin-top: 10px;
+    height: auto;
+}
