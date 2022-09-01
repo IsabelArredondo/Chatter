@@ -1,5 +1,9 @@
-.Wrapper {
-    margin-left: 719px;
+
+
+.postcontainer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
 }
 
 .FeedContainer{
@@ -7,6 +11,14 @@
     width: 598px;
     height: auto;
     padding: 10px 16px;
+}
+
+.createPost{
+    border: 1px solid black;
+    width: 598px;
+    height: auto;
+    padding: 10px 16px;
+    
 }
 
 .userInfo{
@@ -27,9 +39,10 @@
     
 }
 
-.defaultUserLogo{
+.UserLogo{
     font-size: 3rem;
     border-radius: 50%;
+    color: blue;
     width: 48px;
     height: 48px;
     margin-top: 0.5rem;
@@ -37,8 +50,8 @@
 }
 
 .ProfileImage{
-    width:48px;
-    height:48px;
+    width: 40px;
+    height: 35px;
     background-color: none;
     border-radius: 50%;
     cursor: pointer;

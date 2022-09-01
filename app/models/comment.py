@@ -5,7 +5,7 @@ class Comment(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     comment_img = db.Column(db.String(1000))
-    description = db.Column(db.Text)
+    description = db.Column(db.String)
 
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     post_id = db.Column(db.Integer, db.ForeignKey('posts.id'), nullable=False)

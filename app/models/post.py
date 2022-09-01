@@ -4,7 +4,7 @@ class Post(db.Model):
     __tablename__ = 'posts'
 
     id = db.Column(db.Integer, primary_key=True)
-    description = db.Column(db.Text(280))
+    description = db.Column(db.String(280))
     img = db.Column(db.String(1000))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 

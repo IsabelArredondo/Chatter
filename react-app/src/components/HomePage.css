@@ -1,0 +1,56 @@
+.homepagecontainer{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+
+.imagehomepage{
+    /* height: 1077px; */
+    min-height: 1077px;
+    width: 55%;
+}
+
+.signupandlogin {
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    width: auto;
+    height: 538px;
+    text-align: left;
+    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    margin-top: 250px;
+}
+
+.buttonsplash{
+    border: none;
+    border-radius: 20px;
+    color: #F5F8FA;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    width: 280px;
+    font-size: 15px;
+    font-family: 'Roboto' ,Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: #1DA1F2;
+}
+
+
+
+#one{
+    font-size: 64px;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-top: 60px;
+}
+
+#two{
+    font-size: 31px;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: bold;
+}

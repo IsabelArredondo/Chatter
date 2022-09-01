@@ -1,0 +1,16 @@
+.createPostDiv{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    margin-left: 58px;
+    gap: 5px;
+}
+.errors {
+    margin-left: 58px;
+}
+#PostInput{
+    border: none;
+    height: auto;
+ 
+
+}

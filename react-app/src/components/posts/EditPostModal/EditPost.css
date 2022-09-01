@@ -1,0 +1,36 @@
+.editUserInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 45px;
+    margin-right: 45px;
+ 
+    
+    width: 90px;
+}
+
+.EditProfileImage{
+    width: 90px;
+    height: 55px;
+    background-color: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header {
+    width: 90px;
+    text-align: center;
+}
+
+.EditPost{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 30px;
+    gap: 10px;
+}
+
+.editpostform{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}

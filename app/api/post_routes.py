@@ -1,11 +1,12 @@
 from urllib import response
-from flask import Blueprint, redirect, request
+from flask import Blueprint, request
 from flask_login import login_required, current_user
 from app.models import Post, db 
 from app.forms.post_form import PostForm
 
 
 post_routes = Blueprint('posts', __name__)
+# posts = Post.query.order_by((Post.id)).all()
 
 # '/posts/all'
 #get all posts 
@@ -80,6 +81,7 @@ def edit_post(id):
 
 
         db.session.commit()
+        
         allposts = Post.query.all()
         response = [post.to_dict() for post in allposts]
         return {'posts': response}
