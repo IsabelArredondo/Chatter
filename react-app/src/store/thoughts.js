@@ -12,6 +12,14 @@ const getThoughts = (payload) => {
     }
    };
 
+// const userThoughts = (payload) => {
+//     return{
+//      type: LOAD,
+//      payload
+//     }
+//    };
+
+
 const createThoughts = (payload) =>{
     return{
       type: CREATE,
@@ -53,6 +61,23 @@ export const allThoughts = () => async(dispatch) => {
     }
 }
 
+// export const userThought = (id) => async(dispatch) => {
+//     const response = await fetch(`/posts/${id}`, {
+//         headers: {}
+//       });
+
+
+//     if (response.ok) {
+
+//     const post = await response.json()
+
+//     dispatch(userThoughts(post))
+    
+//     return post
+
+    
+//     }
+// }
 
 export const createThought = (data) => async (dispatch) => {
 

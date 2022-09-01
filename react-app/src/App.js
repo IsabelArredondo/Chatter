@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import LoginForm from './components/auth/LoginForm';
-import SignUpForm from './components/auth/SignUpForm';
+import LoginForm from './components/LoginModal/LoginForm';
+import SignUpForm from './components/SignUpModal/SignUpForm';
 import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import HomePage from './components/HomePage';
 import HomeFeed from './components/HomeFeed'
+import UserPosts from './components/UserPosts';
 import { authenticate } from './store/session';
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
         </Route>
         <ProtectedRoute path='/feed' exact={true} >
            <HomeFeed />
+        </ProtectedRoute>
+        <ProtectedRoute path='/posts/user/:userid' exact={true} >
+           <UserPosts />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

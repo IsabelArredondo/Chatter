@@ -1,17 +1,23 @@
 import { allThoughts, deleteThought } from '../store/thoughts'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import {  useParams } from "react-router-dom";
 import CreatePosts from '../components/posts/CreatePosts'
 import EditPostModal from './posts/EditPostModal'
 import './homeFeed.css'
 import NavBar from './NavBar'
 
-function Feed() {
+function UserPosts() {
     const dispatch = useDispatch()
     const thoughts = useSelector(state => Object.values(state?.thoughts).reverse())
+    
 
     const user = useSelector(state => state?.session?.user)
+
+       const { userid } = useParams()
+       
+
+
 
 
     useEffect(() => {
@@ -40,17 +46,18 @@ function Feed() {
             {thoughts?.map((thought) => {
                   
                 return (
+                   <div>
+                    {thought?.user?.id === parseInt(userid)  ?
 
-                    
                     <div className='FeedContainer'>
 
 
                        
                         <div className='userInfo'>
-                        <Link to={`/posts/user/${thought?.user?.id}`}  key={thought?.id} > 
+                        
                         {thought?.user?.profileImage ? <img className='ProfileImage' alt="Profile" src={thought?.user?.profileImage} />
                                 :<i className="fa-solid fa-user-crown UserLogo"></i>}
-                        </Link>
+                        
                         <div className='username'> {thought?.user?.username}</div>
                          
                         </div>
@@ -69,17 +76,27 @@ function Feed() {
                         <div>
                              {user?.id === thought?.user?.id && <EditPostModal thought={thought}/>}
                         </div>
+
+
+                         
                     </div>
+
+                    : null}
                     
+                    </div>
                 )
+                
             })}
 
             </div>
-            <NavBar />
+           <NavBar />
             </div>
+
         </>
     )
 }
 
 
-export default Feed
+
+
+export default UserPosts

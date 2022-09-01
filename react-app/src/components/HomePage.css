@@ -1,7 +1,7 @@
 .homepagecontainer{
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: white;
 }
 
 .imagehomepage{
@@ -11,7 +11,7 @@
 }
 
 .signupandlogin {
-    color: white;
+    color: #1DA1F2;
     padding: 20px;
     margin: 20px;
     width: auto;
@@ -45,12 +45,14 @@
 #one{
     font-size: 64px;
     font-family: 'Roboto', Helvetica, sans-serif;
-    font-weight: bolder;
+    font-weight: 900;
     margin-top: 60px;
+    color: black;
 }
 
 #two{
     font-size: 31px;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-weight: bold;
+    color: black;
 }

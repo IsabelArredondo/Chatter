@@ -59,7 +59,7 @@ def create_post():
         response = post.to_dict()
 
         return response
-
+   
     return {'errors': form.errors}, 401
 
 
@@ -85,7 +85,7 @@ def edit_post(id):
         allposts = Post.query.all()
         response = [post.to_dict() for post in allposts]
         return {'posts': response}
-
+    
     return {'errors': form.errors}, 401
 
 

@@ -21,17 +21,20 @@ const CreatePosts = () => {
         e.preventDefault()
         let validateErrors = [];
         
-        if (description.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
+        if (description?.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
+        if (!description) validateErrors.push('Description cannot be empty');
         // if (!img.includes('https://')) validateErrors.push('Must be a Url')
         // if (!img.includes('jpg')) validateErrors.push('Url must end in jpg, gif, or png')
         // if (!img.includes('gif')) validateErrors.push('Url must end in jpg, gif, or png')
         // if (!img.includes('png')) validateErrors.push('Url must end in jpg, gif, or png')
 
-
         if (validateErrors.length > 0) {
             setErrors(validateErrors);
             return;
         }
+
+
+ 
 
         const data = {
 
@@ -42,12 +45,17 @@ const CreatePosts = () => {
 
 
         dispatch(createThought(data))
+
+        
+          setErrors([]);
+          setDescription("");
+          setImg("")          
+          
         
 
-        setDescription("");
-        setImg("")
 
-        setErrors([])
+
+        
     }
 
 
@@ -66,12 +74,9 @@ const CreatePosts = () => {
             </div>
 
                 <form onSubmit={handleSubmit} className='createPostForm' >
-
-
-                    {errors.map((error, i) => (<div className="errors" key={i}>{error}</div>))}
-                    
+                
                     <div className="createPostDiv">
-
+                        {errors.map((error, i) => (<div className="errors" key={i}>{error}</div>))}
                         <input
 
                             id="PostInput"
@@ -79,7 +84,7 @@ const CreatePosts = () => {
                             placeholder="Whats happening?"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
-                            required
+                            
                         />
 
                         <input
