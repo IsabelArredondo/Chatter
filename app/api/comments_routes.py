@@ -26,7 +26,7 @@ def one_comment(post_id):
 
 # '/comments/<int:id>'
 # delete comment by id DONE 
-@comment_routes.route("/<int:id>", methods=["Delete"])
+@comment_routes.route("/<int:id>", methods=["DELETE"])
 @login_required
 def make_comment(id):
 
@@ -35,9 +35,9 @@ def make_comment(id):
         
         db.session.delete(comment)
         db.session.commit()
-        comments = Comment.query.all()
         
-        return {'response': [comment.to_dict() for comment in comments ]} 
+        
+        return {"commentId": comment.id}  
 
 
 # '/comments/post/<int:post_id1>'
@@ -63,8 +63,9 @@ def post_comment(post_id1):
         db.session.add(comment1)
         db.session.commit()
         response = comment1.to_dict()
+        print(response)
         return {'comment': response }
-
+    print(form.errors)
     return {'errors': form.errors}, 401
 
 
