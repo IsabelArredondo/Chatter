@@ -1,6 +1,6 @@
 .postcontainer{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -15,7 +15,9 @@
     border: 1px solid #E1E8ED;
     width: 598px;
     height: auto;
-    padding: 10px 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 70px;
     
 }
 
@@ -62,4 +64,36 @@
     margin-left: 58px;
     margin-top: 10px;
     height: auto;
+}
+
+.editanddelete{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.deleteIconBtn{
+    background-color: transparent;
+    border: transparent;
+    color: #1da0f2b4;
+}
+
+.editthought{
+    background-color: transparent;
+    border: transparent;
+    color:  #1da0f2b4;
+}
+
+h1{
+ border: transparent;
+ background-color: rgba(255, 255, 255, 0.827);
+ margin: 0px;
+ height: 50px;
+ position: fixed;
+ padding-top: 10px;
+ width: 621px;
+ padding-left: 10px;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 900;
 }

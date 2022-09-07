@@ -1,0 +1,135 @@
+.Commentscontainer{
+    border: 1px solid #AAB8C2;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 10px;
+    width: auto;
+    overflow: scroll;
+    max-height: 500px;
+}
+
+.CommentPostContainer{
+    border: #AAB8C2 solid 1px;
+    padding: 20px;
+    margin: 12px;
+}
+
+.createcomment{
+    border: 1px solid #AAB8C2;
+    padding: 20px;
+    margin: 10px;
+    width: auto;
+}
+
+.overflow{
+    
+    max-height: 1000px;
+    overflow: scroll;
+    width: auto;
+}
+
+.CommentProfileImage{
+    width: 60px;
+    height: 50px;
+    background-color: none;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.editnote{
+    border: 1px solid #AAB8C2;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 10px;
+    width: auto;
+}
+
+/* #editimageInput{
+    padding: 5px;
+    width: 300px;
+} */
+
+#editcomment{
+    padding: 5px;
+    width: 250px;
+}
+
+.edit{
+    width: 90px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1DA1F2;
+    color: #F5F8FA;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 170px;
+
+}
+.commentuserInfo{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.commentusername{
+  font-size: 17px;
+}
+
+.commentdescription{
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.postusername{
+    padding-top: 6px;
+    font-size: 12px;
+} 
+.names{
+    padding-top: 6px;
+    margin-left: 10px;
+    
+}
+.commentfeedimage {
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 58px;
+    margin-top: 10px;
+    height: auto;
+}
+
+.comment{
+    background: none;
+    border: none;
+    color: #1da0f2b4;
+    /* padding: 5px;
+    margin: 10px; */
+}
+
+.commentdelete{
+    background: none;
+    border: none;
+    color: #1DA1F2;
+    margin-left: 380px;
+    margin-bottom: 10px;
+}
+
+
+.CommentButton{
+    width: 90px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1DA1F2;
+    color: #F5F8FA;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 340px;
+}

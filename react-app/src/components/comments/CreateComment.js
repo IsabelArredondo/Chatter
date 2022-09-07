@@ -1,12 +1,11 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Link } from 'react-router-dom'
-import {createThought} from '../../store/thoughts'
-import './CreatePost.css'
+import {createComments} from '../../store/comments'
+import './CreateComment.css'
 
 
-const CreatePosts = () => {
-
+const CreateComment = ({postId}) => {
+    console.log("ID", postId)
     const dispatch = useDispatch()
     const [description, setDescription] = useState('');
     const [img, setImg] = useState('');
@@ -24,10 +23,7 @@ const CreatePosts = () => {
         
         if (description?.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
         if (!description) validateErrors.push('Description cannot be empty');
-        // if (!img.includes('https://')) validateErrors.push('Must be a Url')
-        // if (!img.includes('jpg')) validateErrors.push('Url must end in jpg, gif, or png')
-        // if (!img.includes('gif')) validateErrors.push('Url must end in jpg, gif, or png')
-        // if (!img.includes('png')) validateErrors.push('Url must end in jpg, gif, or png')
+  
 
         if (validateErrors.length > 0) {
             setErrors(validateErrors);
@@ -45,7 +41,7 @@ const CreatePosts = () => {
         };
 
 
-        dispatch(createThought(data))
+        dispatch(createComments(data, postId))
 
         
           setErrors([]);
@@ -60,41 +56,36 @@ const CreatePosts = () => {
         <>
         <div className='CreatePost'>
 
-            {/* <div className='userInfo'> */}
-
-            {/* </div> */}
-
-                <form onSubmit={handleSubmit} className='createPostForm' >
-                    <span className="createcontainer">
-            <Link to={`/posts/user/${user?.id}`} key={user?.id} >
+            <div className='userInfo'>
             { user?.profileImage ?
-            
-                <img className='CreateProfileImage' alt="Profile" src={user?.profileImage} />
+                <img className="CommentProfileImage"  alt="Profile" src={user?.profileImage} />
                 :
                 <i class="fa-solid fa-user-secret defaultuser"></i>
             }
-            </Link>
+            <span className="createusername">{user?.username}</span>
+            
+            </div>
 
+                <form onSubmit={handleSubmit} className='createPostForm' >
                 
-                    
-                        {errors?.map((error, i) => (<div className="errors" key={i}>{error}</div>))}
-                       
+                    <div className="createPostDiv">
+                        {errors.map((error, i) => (<div className="errors" key={i}>{error}</div>))}
                         <textarea
 
-                            id="createPostInput"
+                            id="CommentInput"
                             type="text"
-                            placeholder="Whats happening?"
+                            placeholder="Chat your reply"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             
                         />
-                    
-                     </span>
+                     </div>
+                     
                      <div className="border">
                         
                         <input
 
-                        id="createimageInput"
+                        id="imageInput"
                         type="url"
                         pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                         placeholder="Want to add an image?"
@@ -102,7 +93,7 @@ const CreatePosts = () => {
                         onChange={(e) => setImg(e.target.value)}
                         />
                    
-                    <button className='PostButton' type="submit" >Post</button>
+                    <button className='CommentButton' type="submit" >Post</button>
                  </div>
                 </form>
              </div>    
@@ -111,4 +102,4 @@ const CreatePosts = () => {
     )
 }
 
-export default CreatePosts
+export default CreateComment

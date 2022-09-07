@@ -24,6 +24,7 @@ const EditPosts = ({ thought, setShowModal, id }) => {
         let validateErrors = [];
         
         if (description.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
+        if (!description) validateErrors.push('Description cannot be empty');
 
 
         if (validateErrors.length > 0) {
@@ -43,8 +44,7 @@ const EditPosts = ({ thought, setShowModal, id }) => {
         
         setShowModal(false)
 
-        setDescription("");
-        setImg("")
+    
 
         setErrors([])
     }
@@ -57,12 +57,13 @@ const EditPosts = ({ thought, setShowModal, id }) => {
 
             <div className='editUserInfo'>
             { user?.profileImage ?
-                <img id="Edit" className='EditProfileImage' alt="Profile" src={user?.profileImage} />
+                <img  className='EditProfileImage' alt="Profile" src={user?.profileImage} />
                 
                 :
                 <i className="fa-solid fa-user-crown defaultUserLogo default"></i>
             }
             <div className="header">Post Your Update</div>
+
             </div>
             
                 <form onSubmit={handleSubmit} className='editpostform' >
@@ -72,18 +73,18 @@ const EditPosts = ({ thought, setShowModal, id }) => {
                     
                     
 
-                        <input
+                        <textarea
 
-                            id="PostInput"
+                            id="editPostInput"
                             type="text"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
-                            required
+                            
                         />
 
                         <input
 
-                        id="imageInput"
+                        id="editimageInput"
                         type="url"
                         pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                         value={img}

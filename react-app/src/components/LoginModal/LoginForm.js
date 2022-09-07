@@ -14,8 +14,8 @@ const LoginForm = ({setShowModal}) => {
     e.preventDefault();
     const data = await dispatch(login(email, password));
     
-    if (data) {
-      setErrors(data);
+    if(data){
+      setErrors(data)
     }
   };
 
@@ -28,14 +28,14 @@ const LoginForm = ({setShowModal}) => {
   };
 
   if (user) {
-    setShowModal(false)
+
     return <Redirect to='/feed' />;
   }
 
   return (
     <div className='signUpFormContainer'>
       <i className="fa-solid fa-dove fa-2x login"></i>
-    <h1>Sign in to Chatter</h1>
+    <div>Sign in to Chatter</div>
     <form className='signUpForm' onSubmit={onLogin}>
       
 

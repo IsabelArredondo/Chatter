@@ -91,7 +91,7 @@ export const createThought = (data) => async (dispatch) => {
     const newThought = await response.json();
     dispatch(createThoughts(newThought));
     return newThought
-    }
+    } 
     
 };
 

@@ -14,7 +14,7 @@ function EditPostModal({ thought}) {
         <>
 
             
-            {<button className={'note'} onClick={() => setShowModal(true)}><i class="fa-solid fa-feather-pointed"></i></button>}
+            {<button className={'editthought'} onClick={() => setShowModal(true)}><i class="fa-solid fa-feather-pointed fa-xl"></i></button>}
 
 
             {showModal && (

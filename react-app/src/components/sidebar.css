@@ -1,0 +1,59 @@
+.SideBar{
+    border: transparent;
+    width: 500px;
+    height: 1000px;
+  
+}
+
+.trendingprogramer{
+    font-size: 27pt;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: inherit;
+    font-weight: 800;
+}
+
+.gitandLinkedInContainer{
+    border: 1px solid #E1E8ED;
+    margin-top: 80px;
+    width: fit-content;
+    padding: 16px;
+    display: flex;
+    margin-left: 26px;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #e1e8edd2;
+}
+
+.whotohire{
+    border:transparent;
+    padding-top: 5px;    
+    margin-bottom: 20px;
+    font-size: 20pt;
+    font-weight: 800;
+}
+
+.gitHubicon{
+    color:#f9f9f9;
+    font-size: 5rem;
+}
+
+.linkedInIcon{
+    color:#f4f4f4;
+    font-size: 5rem;
+}
+
+.userLinkedInLink{
+    border: none;
+    padding: 10px;
+    font-size: 15pt;
+    background-color: #1DA1F2;
+    color: #f4f4f4;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.sidebarname{
+    text-align: center;
+}

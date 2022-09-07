@@ -19,7 +19,6 @@ const SignUpForm = ({setShowModal}) => {
     e.preventDefault();
     if (password === repeatPassword) {
       const data = await dispatch(signUp(username, email, password, profileImage));
-      
       if (data) {
         setErrors(data)
       }
@@ -27,6 +26,7 @@ const SignUpForm = ({setShowModal}) => {
         let err = {'repeatePassword':['Password and Repeat password does not match']}
         setErrors(err)
     }
+    
     
   };
 
@@ -50,14 +50,14 @@ const SignUpForm = ({setShowModal}) => {
   };
 
   if (user) {
-    setShowModal(false)
+    
     return <Redirect to='/feed' />;
   }
 
   return (
     <div className='signUpFormContainer'>
       <i className="fa-solid fa-dove fa-2x login"></i>
-      <h1 className='signup'>Create your account</h1>
+      <div className='signup'>Create your account</div>
       <form className='signUpForm' onSubmit={onSignUp} >
         <div>
           {errors?.username &&
