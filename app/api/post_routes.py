@@ -57,9 +57,10 @@ def create_post():
         db.session.add(post)
         db.session.commit()
         response = post.to_dict()
+        
 
         return response
-   
+    
     return {'errors': form.errors}, 401
 
 
