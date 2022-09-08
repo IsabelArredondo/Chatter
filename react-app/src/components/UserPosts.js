@@ -67,7 +67,7 @@ function UserPosts() {
                 
                         
                         {user?.profileImage ? <img className='UserProfileImage' alt="Profile" src={user?.profileImage} />
-                                :<i className="fa-solid fa-user-crown UserLogo"></i>}
+                                :<i class="fa-solid fa-user-secret userpostdefault"></i>}
                         
                         <div className='Userusername'>
                         <div className='userpost'>{user?.username}</div>
@@ -98,7 +98,7 @@ function UserPosts() {
                         <div className='userInfo'>
                         
                         {thought?.user?.profileImage ? <img className='ProfileImage' alt="Profile" src={thought?.user?.profileImage} />
-                                :<i className="fa-solid fa-user-crown UserLogo"></i>}
+                                :<i className="fa-solid fa-user-secret UserLogo"></i>}
                         
                         <div className='username'> {thought?.user?.username}</div>
                          

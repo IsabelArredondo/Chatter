@@ -26,6 +26,11 @@ const SignUpForm = ({setShowModal}) => {
         let err = {'repeatePassword':['Password and Repeat password does not match']}
         setErrors(err)
     }
+    // let errorimage = /^http[^ \!@\$\^&\(\)\+\=]+(\.png|\.jpeg|\.gif|\.jpg)$/;
+    // if (profileImage && !profileImage.match(errorimage)) {
+    //   let error = {'Image':['Image must start with https and end with .png/.jpeg/.gif/.jpg']}
+    //   setErrors(error)
+    // } 
     
     
   };
@@ -134,9 +139,15 @@ const SignUpForm = ({setShowModal}) => {
           </div>}
       </div>
       <div>
-
+         {errors?.profileImage &&
+          <div className="error">
+              {errors?.profileImage?.map((error, ind) => (
+                <div key={ind}>{error}</div>
+              ))}
+          </div>
+          }
         <input
-          type='url'
+          type='text'
           name='profile_image'
           placeholder='Profile Image'
           onChange={updateProfileImage}
@@ -144,13 +155,7 @@ const SignUpForm = ({setShowModal}) => {
           className='signupInput'
 
         ></input>
-          {errors?.profile_image &&
-          <div className="error">
-              {errors?.profile_image?.map((error, ind) => (
-                <div key={ind}>{error}</div>
-              ))}
-          </div>
-          }
+ 
       </div>
       <button className = 'signupBtn' type='submit'>Sign Up</button>
     </form>

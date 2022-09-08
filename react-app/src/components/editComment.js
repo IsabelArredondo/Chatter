@@ -18,8 +18,12 @@ function EditComment({ comment, setShowModal, id }) {
 
 
         let validateErrors = [];
+        let errorimage = /^http[^ \!@\$\^&\(\)\+\=]+(\.png|\.jpeg|\.gif|\.jpg)$/;
+
         if (description?.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
         if (!description) validateErrors.push('Comment cannot be empty');
+        if(description.startsWith(' ')) validateErrors.push('Comment cannot start with empty space');
+        if (img && !img.match(errorimage)) validateErrors.push('Image must start with https and end with .png/.jpeg/.gif/.jpg');
 
 
         if (validateErrors.length > 0) {

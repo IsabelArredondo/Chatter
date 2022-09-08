@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     padding-top: 5px;
-    margin-left: 58px;
+    
     gap: 5px;
 }
 
@@ -16,6 +16,7 @@
     margin-left: 10px;
     font-family: Helvetica, Arial, sans-serif;
     resize: none;
+    overflow-y: scroll;
 
 }
 
@@ -59,15 +60,18 @@
     background-color: transparent;
     border-radius: 50%;
     cursor: pointer;
-    margin-left: -55px;
+    
 }
 
-.fa-user-secret.defaultuser {
-    width: 70px;
-    height: 60px;
-    background-color: none;
+.defaultuser {
+    width: 80px;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    padding-top: 5px;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 /* .border{

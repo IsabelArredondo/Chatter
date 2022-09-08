@@ -1,17 +1,20 @@
 .Commentscontainer{
     border: 1px solid #AAB8C2;
     padding: 20px;
-    padding-left: 40px;
     margin: 10px;
-    width: auto;
-    overflow: scroll;
+    width: 438px;
+    overflow-y: scroll;
     max-height: 500px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .CommentPostContainer{
-    border: #AAB8C2 solid 1px;
+    border: #E1E8ED solid 1px;
     padding: 20px;
     margin: 12px;
+    background-color: #E1E8ED;
+    border-radius: 5px;
 }
 
 .createcomment{
@@ -19,23 +22,35 @@
     padding: 20px;
     margin: 10px;
     width: auto;
+    margin-bottom: 0px;
 }
 
 .overflow{
     
     max-height: 1000px;
-    overflow: scroll;
+    overflow-y: scroll;
     width: auto;
+    margin-bottom: 10px;
 }
 
 .CommentProfileImage{
-    width: 60px;
-    height: 50px;
-    background-color: none;
+    width: 52px;
+    height: 43px;
+    background-color: transparent;
     border-radius: 50%;
     cursor: pointer;
     
 }
+
+.xxmainpost{
+    width: 70px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
 .editnote{
     border: 1px solid #AAB8C2;
     padding: 20px;
@@ -53,6 +68,10 @@
     padding: 5px;
     width: 250px;
 }
+
+/* .createPostForm{
+
+} */
 
 .edit{
     width: 90px;
@@ -80,10 +99,16 @@
   font-size: 17px;
 }
 
-.commentdescription{
+.wkcahdu{
     margin-top: 30px;
-    margin-left: 25px;
+    margin-left: 4px;
+    max-width: 418px;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    padding: 10px;
+    margin-bottom: 10px;
 }
+
 
 .postusername{
     padding-top: 6px;
@@ -101,6 +126,14 @@
     margin-top: 10px;
     height: auto;
 }
+.feedcommentimage{
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 24px;
+    margin-top: 28px;
+    height: auto;
+
+}
 
 .comment{
     background: none;
@@ -117,7 +150,9 @@
     margin-left: 380px;
     margin-bottom: 10px;
 }
-
+.userComments{
+    overflow-y: scroll;
+}
 
 .CommentButton{
     width: 90px;
@@ -131,5 +166,6 @@
     font-size: 15px;
     text-align: center;
     text-decoration: none;
-    margin-left: 340px;
+    margin: 5px;
+
 }

@@ -5,10 +5,10 @@ import './CreateComment.css'
 
 
 const CreateComment = ({postId}) => {
-    console.log("ID", postId)
+    
     const dispatch = useDispatch()
     const [description, setDescription] = useState('');
-    const [img, setImg] = useState('');
+    const [comment_img, setComment_img] = useState('');
     const [errors, setErrors] = useState([]);
 
 
@@ -21,8 +21,13 @@ const CreateComment = ({postId}) => {
         e.preventDefault()
         let validateErrors = [];
         
-        if (description?.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
-        if (!description) validateErrors.push('Description cannot be empty');
+        
+        let errorimage = /^http[^ \!@\$\^&\(\)\+\=]+(\.png|\.jpeg|\.gif|\.jpg)$/;
+
+        if (description?.length > 200) validateErrors.push('Comment cannot be longer than 200 characters');
+        if (!description) validateErrors.push('Comment cannot be empty');
+        if(description.startsWith(' ')) validateErrors.push('Thought cannot start with empty space');
+        if (comment_img && !comment_img.match(errorimage)) validateErrors.push('Image must start with https and end with .png/.jpeg/.gif/.jpg');
   
 
         if (validateErrors.length > 0) {
@@ -36,7 +41,7 @@ const CreateComment = ({postId}) => {
         const data = {
 
             description,
-            img
+            comment_img
 
         };
 
@@ -46,7 +51,7 @@ const CreateComment = ({postId}) => {
         
           setErrors([]);
           setDescription("");
-          setImg("")          
+          setComment_img("")          
           
     }
 
@@ -60,7 +65,7 @@ const CreateComment = ({postId}) => {
             { user?.profileImage ?
                 <img className="CommentProfileImage"  alt="Profile" src={user?.profileImage} />
                 :
-                <i class="fa-solid fa-user-secret defaultuser"></i>
+                <i class="fa-solid fa-user-secret commentdefaultuser"></i>
             }
             <span className="createusername">{user?.username}</span>
             
@@ -74,27 +79,27 @@ const CreateComment = ({postId}) => {
 
                             id="CommentInput"
                             type="text"
-                            placeholder="Chat your reply"
+                            placeholder="Comment your reply"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             
                         />
                      </div>
                      
-                     <div className="border">
+                     <span className="border">
                         
                         <input
 
                         id="imageInput"
-                        type="url"
-                        pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
+                        type="text"
+                        // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                         placeholder="Want to add an image?"
-                        value={img}
-                        onChange={(e) => setImg(e.target.value)}
+                        value={comment_img}
+                        onChange={(e) => setComment_img(e.target.value)}
                         />
                    
                     <button className='CommentButton' type="submit" >Post</button>
-                 </div>
+                 </span>
                 </form>
              </div>    
 

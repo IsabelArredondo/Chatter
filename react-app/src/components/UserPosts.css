@@ -1,13 +1,16 @@
 .UserPostHeader{
     border: 1px solid #E1E8ED;
     width: 630px;
-    height: 350px;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 30px;
 }
 
 .HeaderImage{
     height: 170px;
     width: 630px;
-    position: relative;
+    position: absolute;
+    /* position: relative; */
 }
 
 .UserProfileImage{
@@ -16,14 +19,31 @@
     background-color: black;
     border: 10px solid white;
     border-radius: 50%;
+    margin-top: 120px;
+    margin-left: 10px;
     position: absolute;
-    left: 970px;
-    top: 120px;
+
+
+}
+
+.userpostdefault{
+    width: 100px;
+    height: 90px;
+    background-color: black;
+    border: 10px solid white;
+    color: white;
+    font-size: 75px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 50%;
+    margin-top: 120px;
+    margin-left: 10px;
+    position: absolute;
 
 }
 
 .Userusername{
-    margin-top: 50px;
+    margin-top: 250px;
     border: none;
     padding-left: 20px;
     padding-right: 20px;

@@ -23,8 +23,14 @@ const EditPosts = ({ thought, setShowModal, id }) => {
         e.preventDefault()
         let validateErrors = [];
         
-        if (description.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
-        if (!description) validateErrors.push('Description cannot be empty');
+        
+        
+        let errorimage = /^http[^ \!@\$\^&\(\)\+\=]+(\.png|\.jpeg|\.gif|\.jpg)$/;
+
+        if (description?.length > 200) validateErrors.push('update cannot be longer than 200 characters');
+        if (!description) validateErrors.push('update cannot be empty');
+        if(description.startsWith(' ')) validateErrors.push('update cannot start with empty space');
+        if (img && !img.match(errorimage)) validateErrors.push('Image must start with https and end with .png/.jpeg/.gif/.jpg');
 
 
         if (validateErrors.length > 0) {
@@ -60,7 +66,7 @@ const EditPosts = ({ thought, setShowModal, id }) => {
                 <img  className='EditProfileImage' alt="Profile" src={user?.profileImage} />
                 
                 :
-                <i className="fa-solid fa-user-crown defaultUserLogo default"></i>
+                <i className="fa-solid fa-user-secret edituserlogo"></i>
             }
             <div className="header">Post Your Update</div>
 

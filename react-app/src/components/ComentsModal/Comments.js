@@ -38,7 +38,7 @@ function Comments({ thought, setShowModal, id }) {
                     <div className='userInfo'>
 
                         <Link to={`/posts/user/${thought?.user?.id}`} key={thought?.id} >
-                            {thought?.user?.profileImage ? <img className='ProfileImage' alt="Profile" src={thought?.user?.profileImage} />
+                            {thought?.user?.profileImage ? <img className='xxmainpost' alt="Profile" src={thought?.user?.profileImage} />
                                 : <i class="fa-solid fa-user-secret"></i>}
                         </Link>
                         <div className='username'> {thought?.user?.username}</div>
@@ -88,11 +88,12 @@ function Comments({ thought, setShowModal, id }) {
                 </div>
                 </div>
 
-          <div className="commentdescription">
+          <div className="wkcahdu">
            {comment?.description}
             </div>
-            {comment?.img ?
-           <img className='feedimage' alt="description" src={comment?.img} />
+
+            {comment?.comment_img ?
+           <img className='feedcommentimage' alt="description" src={comment?.comment_img} />
             : null}
              
              {comment?.user.id === user_id && comment?.post?.id === id ?
@@ -104,6 +105,7 @@ function Comments({ thought, setShowModal, id }) {
                 </div>
                : null
             }
+            
           </div>
 
 

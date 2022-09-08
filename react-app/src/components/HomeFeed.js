@@ -54,7 +54,7 @@ function Feed() {
                                 <div className='userInfo'>
                                     <Link to={`/posts/user/${thought?.user?.id}`} key={thought?.id} >
                                         {thought?.user?.profileImage ? <img className='ProfileImage' alt="Profile" src={thought?.user?.profileImage} />
-                                            : <i class="fa-solid fa-user-secret"></i>}
+                                            : <i class="fa-solid fa-user-secret homefeeddefaultuser"></i>}
                                     </Link>
                                     <div className='username'> {thought?.user?.username}</div>
 

@@ -21,13 +21,13 @@ const CreatePosts = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         let validateErrors = [];
-        
+        let errorimage = /^http[^ \!@\$\^&\(\)\+\=]+(\.png|\.jpeg|\.gif|\.jpg)$/;
+
         if (description?.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
-        if (!description) validateErrors.push('Description cannot be empty');
-        // if (!img.includes('https://')) validateErrors.push('Must be a Url')
-        // if (!img.includes('jpg')) validateErrors.push('Url must end in jpg, gif, or png')
-        // if (!img.includes('gif')) validateErrors.push('Url must end in jpg, gif, or png')
-        // if (!img.includes('png')) validateErrors.push('Url must end in jpg, gif, or png')
+        if (!description) validateErrors.push('Thought cannot be empty');
+        if(description.startsWith(' ')) validateErrors.push('Thought cannot start with empty space');
+        if (img && !img.match(errorimage)) validateErrors.push('Image must start with https and end with .png/.jpeg/.gif/.jpg');
+ 
 
         if (validateErrors.length > 0) {
             setErrors(validateErrors);
@@ -46,6 +46,7 @@ const CreatePosts = () => {
 
 
         dispatch(createThought(data))
+        console.log(data.img)
 
         
           setErrors([]);
@@ -76,7 +77,7 @@ const CreatePosts = () => {
             </Link>
 
                 
-                    
+                    <div>
                         {errors?.map((error, i) => (<div className="errors" key={i}>{error}</div>))}
                        
                         <textarea
@@ -88,15 +89,16 @@ const CreatePosts = () => {
                             onChange={(e) => setDescription(e.target.value)}
                             
                         />
-                    
+                    </div>
                      </span>
                      <div className="border">
                         
                         <input
 
                         id="createimageInput"
-                        type="url"
-                        pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
+                        type="text"
+                        // type="url"
+                        // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                         placeholder="Want to add an image?"
                         value={img}
                         onChange={(e) => setImg(e.target.value)}

@@ -11,22 +11,23 @@
 #CommentInput{
     border: none;
     width: 350px;
-    height: 40px;
-    margin-top: 20px;
+    height: 70px;
+    /* margin-top: 20px; */
     font-family: Helvetica, Arial, sans-serif;
-
+    resize: none;
+    margin-bottom: 10px;
 }
 
 #imageInput{
-    margin-left: 58px;
-    width: 300px;
+    margin-left: 52px;
+    width: 278px;
     height: 40px;
     margin-bottom: 15px;
-    border: none; 
+    border: none;
 }
 
 .createusername{
-    margin-left: 10px;
+    padding: 10px;
     
 }
 
@@ -44,12 +45,18 @@
     padding-left: 20px;
 }
 
-.fa-user-secret.defaultuser {
-    width: 70px;
-    height: 60px;
-    background-color: none;
-    border-radius: 50%;
-    cursor: pointer;
+.commentdefaultuser {
+    
+        width: 80px;
+        height: 70px;
+        background-color: black;
+        color: white;
+        font-size: 55px;
+        text-align: center;
+        padding-top: 5px;
+        border-radius: 50%;
+    
+    
 }
 
 /* .border{
