@@ -51,12 +51,13 @@ function EditComment({ comment, setShowModal, id }) {
     }
 
     return (
+        
         <div className="editnote">
 
-            <h3>Edit Comment</h3>
+
          <form onSubmit={handleSubmit} className='createUpdate'>
 
-
+            <h3>Edit Comment</h3>
             <ul> {errors.map((error, i) => (<div className="errors" key={i}>{error}</div>))}</ul>
 
             <label>

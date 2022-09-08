@@ -73,7 +73,7 @@ const SignUpForm = ({setShowModal}) => {
               ))}
           </div>
           }
-
+          Username:
           <input className='signupInput'
             type='text'
             name='username'
@@ -91,6 +91,7 @@ const SignUpForm = ({setShowModal}) => {
             ))}
           </div>
         }
+        Email:
         <input
           type='text'
           name='email'
@@ -107,7 +108,7 @@ const SignUpForm = ({setShowModal}) => {
                 <div key={ind}>{error}</div>
               ))}
           </div>}
-
+        Password:
         <input
           type='password'
           name='password'
@@ -121,7 +122,7 @@ const SignUpForm = ({setShowModal}) => {
 
       </div>
       <div>
-
+        Repeat Password:
         <input
           type='password'
           name='repeat_password'
@@ -147,11 +148,12 @@ const SignUpForm = ({setShowModal}) => {
               ))}
           </div>
           }
+        Optional Profile Image: 
         <input
           type="url"
           pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
           name='profile_image'
-          placeholder='Image must start with https and end with .jpg/.gif/.png'
+          placeholder='must start with https and end with .jpg/.gif/.png'
           onChange={updateProfileImage}
           value={profileImage}
           className='signupInput'

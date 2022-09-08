@@ -97,12 +97,14 @@
     background-color: transparent;
     border: transparent;
     color: #1da0f2b4;
+    cursor: pointer;
 }
 
 .editthought{
     background-color: transparent;
     border: transparent;
     color:  #1da0f2b4;
+    cursor: pointer;
 }
 
 h1{

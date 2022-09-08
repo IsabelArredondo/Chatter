@@ -42,11 +42,12 @@
     text-decoration: none;
     margin-left: 61px;
     margin-top: 10px;
-
+    cursor: pointer;
 }
 
 .PostButton:hover{
     background-color: #65778696;
+    cursor: pointer;
 }
 
 .errors{

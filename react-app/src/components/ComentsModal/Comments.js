@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux"
-import { useEffect } from 'react'
+import { useEffect} from 'react'
 import { getAllComments, commentDelete } from '../../store/comments'
 import { Link } from 'react-router-dom'
 import CreateComment from '../comments/CreateComment'
-import EditComment from "../editComment"
+// import EditComment from "../editComment"
+import EditIndex from "../editindex"
 import './Comments.css'
 
 function Comments({ thought, setShowModal, id }) {
@@ -12,7 +13,8 @@ function Comments({ thought, setShowModal, id }) {
 
     const comments = useSelector((state) => (state?.comments?.comments))
     const user_id = useSelector(state => state?.session?.user?.id)
-    
+    // NEW
+
 
     
 
@@ -28,6 +30,9 @@ function Comments({ thought, setShowModal, id }) {
         e.preventDefault()
         dispatch(commentDelete(id))
     }
+
+   
+
 
 
     return (
@@ -97,12 +102,14 @@ function Comments({ thought, setShowModal, id }) {
             : null}
              
              {comment?.user.id === user_id && comment?.post?.id === id ?
-                 <div>
-                <button className="commentdelete" onClick={removeComment(comment?.id)}><i className="fa-solid fa-trash deletePenIcon fa-xl"></i></button>
+                 <span>
 
-                <EditComment comment={comment} id={comment?.id} />
-
-                </div>
+                <button className="deleteIconBtn" onClick={removeComment(comment?.id)}><i className="fa-solid fa-trash deleteIconBtn fa-xl"></i></button>
+             
+                
+                {/* <EditComment comment={comment} id={comment?.id} /> */}
+                <EditIndex comment={comment} id={comment?.id} />
+                </span>
                : null
             }
             

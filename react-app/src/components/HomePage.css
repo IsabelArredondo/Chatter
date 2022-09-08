@@ -38,6 +38,7 @@
     font-family: 'Roboto' ,Helvetica, sans-serif;
     font-weight: bolder;
     background-color: #1DA1F2;
+    cursor: pointer;
 }
 
 
@@ -92,4 +93,5 @@
     margin-top: 50px;
     margin-bottom: 10px;
     margin-left: 75px;
+    cursor: pointer;
 }

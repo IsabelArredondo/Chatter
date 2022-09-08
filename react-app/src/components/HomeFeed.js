@@ -11,7 +11,9 @@ import SideBar from './sidebar'
 
 function Feed() {
     const dispatch = useDispatch()
-    const thoughts = useSelector(state => Object.values(state?.thoughts).reverse())
+    
+    const thought = useSelector(state => (state?.thoughts))
+    const thoughts = Object.values(thought).reverse()
 
     const user = useSelector(state => state?.session?.user)
 
