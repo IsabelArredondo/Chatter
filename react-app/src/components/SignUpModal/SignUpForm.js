@@ -31,6 +31,7 @@ const SignUpForm = ({setShowModal}) => {
     //   let error = {'Image':['Image must start with https and end with .png/.jpeg/.gif/.jpg']}
     //   setErrors(error)
     // } 
+    // , validators=[ Regexp('(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)', flags=0, message='Image must start with https and end with .png/.jpeg/.gif/.jpg')]
     
     
   };
@@ -147,9 +148,10 @@ const SignUpForm = ({setShowModal}) => {
           </div>
           }
         <input
-          type='text'
+          type="url"
+          pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
           name='profile_image'
-          placeholder='Profile Image'
+          placeholder='Image must start with https and end with .jpg/.gif/.png'
           onChange={updateProfileImage}
           value={profileImage}
           className='signupInput'

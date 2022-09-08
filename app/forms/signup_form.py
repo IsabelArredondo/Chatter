@@ -26,4 +26,4 @@ class SignUpForm(FlaskForm):
         'username', validators=[DataRequired(message="Please Provide User Name"), username_exists])
     email = StringField('email', validators=[DataRequired(message="Please Provide Email"), Email(), user_exists])
     password = StringField('password', validators=[DataRequired(message="Please Provide Password")])
-    profileImage = StringField('profileImage', validators=[ Regexp('(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)', flags=0, message='Image must start with https and end with .png/.jpeg/.gif/.jpg')])
+    profileImage = StringField('profileImage')
