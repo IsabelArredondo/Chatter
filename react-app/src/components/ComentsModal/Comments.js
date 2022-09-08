@@ -44,7 +44,7 @@ function Comments({ thought, setShowModal, id }) {
 
                         <Link to={`/posts/user/${thought?.user?.id}`} key={thought?.id} >
                             {thought?.user?.profileImage ? <img className='xxmainpost' alt="Profile" src={thought?.user?.profileImage} />
-                                : <i class="fa-solid fa-user-secret"></i>}
+                                : <i className="fa-solid fa-user-secret"></i>}
                         </Link>
                         <div className='username'> {thought?.user?.username}</div>
 
@@ -83,9 +83,9 @@ function Comments({ thought, setShowModal, id }) {
 
          <div className="userComments">
          <div className='commentuserInfo'>
-         <Link to={`/posts/user/${thought?.user?.id}`} key={thought?.id} >
+         <Link to={`/posts/user/${user_id}`} key={thought?.id} >
             {comment?.user?.profileImage ? <img className='CommentProfileImage' alt="Profile" src={comment?.user?.profileImage} />
-            : <i class="fa-solid fa-user-secret"></i>}
+            : <i class="fa-solid fa-user-secret homefeeddefaultuser"></i>}
                 </Link>
                 <div className="names">
                 <div className='commentusername'>{comment?.user?.username}</div>

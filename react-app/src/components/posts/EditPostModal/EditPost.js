@@ -61,24 +61,24 @@ const EditPosts = ({ thought, setShowModal, id }) => {
         <>
         <div className='EditPost'>
 
-            <div className='editUserInfo'>
+            {/* <div className='editUserInfo'>
             { user?.profileImage ?
                 <img  className='EditProfileImage' alt="Profile" src={user?.profileImage} />
                 
                 :
                 <i className="fa-solid fa-user-secret edituserlogo"></i>
             }
-            <div className="header">Post Your Update</div>
-
-            </div>
             
+
+            </div> */}
+            <div className="header">Post Your Update</div>
                 <form onSubmit={handleSubmit} className='editpostform' >
 
 
                     {errors.map((error, i) => (<div className="errors" key={i}>{error}</div>))}
                     
                     
-
+                         Edit body:
                         <textarea
 
                             id="editPostInput"
@@ -87,7 +87,7 @@ const EditPosts = ({ thought, setShowModal, id }) => {
                             onChange={(e) => setDescription(e.target.value)}
                             
                         />
-
+                         Edit Image:
                         <input
 
                         id="editimageInput"
