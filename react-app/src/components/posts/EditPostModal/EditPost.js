@@ -91,8 +91,8 @@ const EditPosts = ({ thought, setShowModal, id }) => {
                         <input
 
                         id="editimageInput"
-                        type="url"
-                        pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
+                        type="text"
+                        // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                         value={img}
                         onChange={(e) => setImg(e.target.value)}
                         />

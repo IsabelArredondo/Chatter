@@ -53,7 +53,7 @@ function EditComment({ comment, setShowModal, id }) {
     return (
         <div className="editnote">
 
-            
+            <h3>Edit Comment</h3>
          <form onSubmit={handleSubmit} className='createUpdate'>
 
 
@@ -74,8 +74,8 @@ function EditComment({ comment, setShowModal, id }) {
                     <input
 
                     id="editimageInput"
-                    type="url"
-                    pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
+                    type="text"
+                    // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                     placeholder="Want to add an image?"
                     value={img}
                     onChange={(e) => setImg(e.target.value)}

@@ -67,6 +67,7 @@
 #editcomment{
     padding: 5px;
     width: 250px;
+    resize: none;
 }
 
 /* .createPostForm{
