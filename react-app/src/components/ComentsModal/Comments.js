@@ -61,7 +61,7 @@ function Comments({ thought, setShowModal, id }) {
 
     </div>
      {comments?.map((comment) => {
-     console.log('COMMENT', comment.post.id)
+     
      return (
 
      <div>

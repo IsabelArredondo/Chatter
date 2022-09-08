@@ -83,7 +83,7 @@ export const createComments = (data, postId) => async (dispatch) => {
 
     const newcomments = await response.json();
     dispatch(create(newcomments));
-    console.log("NEW COMMENT",newcomments)
+    
     return newcomments
 };
 

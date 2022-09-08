@@ -46,7 +46,7 @@ const CreatePosts = () => {
 
 
         dispatch(createThought(data))
-        console.log(data.img)
+        
 
         
           setErrors([]);
