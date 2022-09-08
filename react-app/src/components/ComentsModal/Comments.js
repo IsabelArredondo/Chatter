@@ -16,7 +16,6 @@ function Comments({ thought, setShowModal, id }) {
     // NEW
 
 
-    
 
     useEffect(() => {
         (async () => {
@@ -32,7 +31,7 @@ function Comments({ thought, setShowModal, id }) {
     }
 
    
-
+console.log('Comment section',thought.img)
 
 
     return (
@@ -44,7 +43,7 @@ function Comments({ thought, setShowModal, id }) {
 
                         <Link to={`/posts/user/${thought?.user?.id}`} key={thought?.id} >
                             {thought?.user?.profileImage ? <img className='xxmainpost' alt="Profile" src={thought?.user?.profileImage} />
-                                : <i className="fa-solid fa-user-secret"></i>}
+                                : <i className="fa-solid fa-user-secret commentdefaultuser "></i>}
                         </Link>
                         <div className='username'> {thought?.user?.username}</div>
 
@@ -53,6 +52,7 @@ function Comments({ thought, setShowModal, id }) {
 
                     <div className='description'>{thought?.description}</div>
                     {thought?.img ?
+                    
                         <img className='commentfeedimage' alt="description" src={thought?.img} />
                         : null
                     }

@@ -46,7 +46,7 @@ const CreatePosts = () => {
 
 
         dispatch(createThought(data))
-        
+        console.log(data)
 
         
           setErrors([]);
@@ -97,8 +97,8 @@ const CreatePosts = () => {
 
                         id="createimageInput"
                         type="text"
-                        // type="url"
-                        // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
+                    // type="url"
+                    // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
                         placeholder="Want to add an image?"
                         value={img}
                         onChange={(e) => setImg(e.target.value)}

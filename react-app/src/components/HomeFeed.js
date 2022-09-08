@@ -45,7 +45,7 @@ function Feed() {
                     </div>
 
                     {thoughts?.map((thought) => {
-
+                      console.log(thought?.img)
                         return (
 
 
@@ -65,6 +65,7 @@ function Feed() {
 
                                 <div className='description'>{thought?.description}</div>
                                 {thought?.img ?
+                                
                                     <img className='feedimage' alt="description" src={thought?.img} />
                                     : null
                                 }
