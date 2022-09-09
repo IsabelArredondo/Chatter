@@ -27,7 +27,8 @@
 
 .overflow{
     
-    max-height: 700px;
+    /* max-height: 700px; */
+    max-height: 80%;
     overflow-y: scroll;
     width: auto;
     margin-bottom: 10px;
