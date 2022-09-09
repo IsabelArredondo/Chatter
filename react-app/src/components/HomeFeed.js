@@ -55,7 +55,12 @@ function Feed() {
 
                                 <div className='userInfo'>
                                     <Link to={`/posts/user/${thought?.user?.id}`} key={thought?.id} >
-                                        {thought?.user?.profileImage ? <img className='ProfileImage' alt="Profile" src={thought?.user?.profileImage} />
+                                        {thought?.user?.profileImage ? <img className='ProfileImage' onError={({target}) => {
+                                         target.onError = null;
+                                         target.src = 'https://media.istockphoto.com/vectors/invalid-stamp-invalid-label-round-grunge-sign-vector-id1289670343?k=20&m=1289670343&s=612x612&w=0&h=Cck0Yb0f20XFUAZpkgXhoyllgr-EdMMkQWBBiCdq3Hs=';
+                                    }} 
+                                        
+                                        alt="Profile" src={thought?.user?.profileImage} />
                                             : <i className="fa-solid fa-user-secret homefeeddefaultuser"></i>  }
                                     </Link>
                                     <div className='username'> {thought?.user?.username}</div>
@@ -66,7 +71,10 @@ function Feed() {
                                 <div className='description'>{thought?.description}</div>
                                 {thought?.img ?
                                 
-                                    <img className='feedimage' alt="description" src={thought?.img} />
+                                    <img className='feedimage' alt="description" onError={({target}) => {
+                                         target.onError = null;
+                                         target.src = 'https://media.istockphoto.com/vectors/invalid-stamp-invalid-label-round-grunge-sign-vector-id1289670343?k=20&m=1289670343&s=612x612&w=0&h=Cck0Yb0f20XFUAZpkgXhoyllgr-EdMMkQWBBiCdq3Hs=';
+                                    }}   src={thought?.img} />
                                     : null
                                 }
                             

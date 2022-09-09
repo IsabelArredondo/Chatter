@@ -42,7 +42,12 @@ console.log('Comment section',thought.img)
                     <div className='userInfo'>
 
                         <Link to={`/posts/user/${thought?.user?.id}`} key={thought?.id} >
-                            {thought?.user?.profileImage ? <img className='xxmainpost' alt="Profile" src={thought?.user?.profileImage} />
+                            {thought?.user?.profileImage ? <img className='xxmainpost' alt="Profile" onError={({target}) => {
+                                         target.onError = null;
+                                         target.src = 'https://media.istockphoto.com/vectors/invalid-stamp-invalid-label-round-grunge-sign-vector-id1289670343?k=20&m=1289670343&s=612x612&w=0&h=Cck0Yb0f20XFUAZpkgXhoyllgr-EdMMkQWBBiCdq3Hs=';
+                                    }} 
+                            
+                            src={thought?.user?.profileImage} />
                                 : <i className="fa-solid fa-user-secret commentdefaultuser "></i>}
                         </Link>
                         <div className='username'> {thought?.user?.username}</div>
@@ -53,7 +58,12 @@ console.log('Comment section',thought.img)
                     <div className='description'>{thought?.description}</div>
                     {thought?.img ?
                     
-                        <img className='commentfeedimage' alt="description" src={thought?.img} />
+                        <img className='commentfeedimage' alt="description" onError={({target}) => {
+                            target.onError = null;
+                            target.src = 'https://media.istockphoto.com/vectors/invalid-stamp-invalid-label-round-grunge-sign-vector-id1289670343?k=20&m=1289670343&s=612x612&w=0&h=Cck0Yb0f20XFUAZpkgXhoyllgr-EdMMkQWBBiCdq3Hs=';
+                       }} 
+                        
+                        src={thought?.img} />
                         : null
                     }
                 </div>
@@ -84,7 +94,11 @@ console.log('Comment section',thought.img)
          <div className="userComments">
          <div className='commentuserInfo'>
          <Link to={`/posts/user/${user_id}`} key={thought?.id} >
-            {comment?.user?.profileImage ? <img className='CommentProfileImage' alt="Profile" src={comment?.user?.profileImage} />
+            {comment?.user?.profileImage ? <img className='CommentProfileImage' alt="Profile" onError={({target}) => {
+                                         target.onError = null;
+                                         target.src = 'https://media.istockphoto.com/vectors/invalid-stamp-invalid-label-round-grunge-sign-vector-id1289670343?k=20&m=1289670343&s=612x612&w=0&h=Cck0Yb0f20XFUAZpkgXhoyllgr-EdMMkQWBBiCdq3Hs=';
+                                    }} 
+            src={comment?.user?.profileImage} />
             : <i class="fa-solid fa-user-secret homefeeddefaultuser"></i>}
                 </Link>
                 <div className="names">
@@ -98,7 +112,12 @@ console.log('Comment section',thought.img)
             </div>
 
             {comment?.comment_img ?
-           <img className='feedcommentimage' alt="description" src={comment?.comment_img} />
+           <img className='feedcommentimage' alt="description" onError={({target}) => {
+            target.onError = null;
+            target.src = 'https://media.istockphoto.com/vectors/invalid-stamp-invalid-label-round-grunge-sign-vector-id1289670343?k=20&m=1289670343&s=612x612&w=0&h=Cck0Yb0f20XFUAZpkgXhoyllgr-EdMMkQWBBiCdq3Hs=';
+            }} 
+           
+           src={comment?.comment_img} />
             : null}
              
              {comment?.user.id === user_id && comment?.post?.id === id ?

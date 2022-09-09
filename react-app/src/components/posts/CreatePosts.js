@@ -70,7 +70,12 @@ const CreatePosts = () => {
             <Link to={`/posts/user/${user?.id}`} key={user?.id} >
             { user?.profileImage ?
             
-                <img className='CreateProfileImage' alt="Profile" src={user?.profileImage} />
+                <img className='CreateProfileImage' alt="Profile" onError={({target}) => {
+                    target.onError = null;
+                    target.src = 'https://media.istockphoto.com/vectors/invalid-stamp-invalid-label-round-grunge-sign-vector-id1289670343?k=20&m=1289670343&s=612x612&w=0&h=Cck0Yb0f20XFUAZpkgXhoyllgr-EdMMkQWBBiCdq3Hs=';
+               }} 
+                
+                src={user?.profileImage} />
                 :
                 <i class="fa-solid fa-user-secret defaultuser"></i>
             }
