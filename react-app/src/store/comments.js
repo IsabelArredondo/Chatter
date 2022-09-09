@@ -43,7 +43,7 @@ export const editComments = (data, id) => async (dispatch) => {
       },
       body: JSON.stringify({
         description: data.description,
-        img: data.img
+        comment_img: data.comment_img
 
       }),
 

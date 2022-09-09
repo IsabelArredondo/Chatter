@@ -3,8 +3,8 @@
     padding: 20px;
     margin: 10px;
     width: 438px;
-    overflow-y: scroll;
-    max-height: 500px;
+    /* overflow-y: scroll; */
+    /* max-height: 500px; */
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -109,7 +109,7 @@
 
 .wkcahdu{
     margin-top: 30px;
-    margin-left: 4px;
+    margin-left: 24px;
     max-width: 418px;
     white-space: pre-line;
     overflow-wrap: break-word;
@@ -160,9 +160,9 @@
     margin-left: 380px;
     margin-bottom: 10px;
 }
-.userComments{
-    overflow-y: scroll;
-}
+/* .userComments{
+
+} */
 
 .CommentButton{
     width: 90px;

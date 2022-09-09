@@ -8,7 +8,7 @@ function EditComment({ comment, setShowModal, id }) {
 
     const dispatch = useDispatch()
     const [description, setDescription] = useState(comment?.description);
-    const [img, setImg] = useState(comment?.img);
+    const [comment_img, setComment_img] = useState(comment?.comment_img);
    
     const [errors, setErrors] = useState([]);
 
@@ -23,7 +23,7 @@ function EditComment({ comment, setShowModal, id }) {
         if (description?.length > 200) validateErrors.push('Thought cannot be longer than 200 characters');
         if (!description) validateErrors.push('Comment cannot be empty');
         if(description.startsWith(' ')) validateErrors.push('Comment cannot start with empty space');
-        if (img && !img.match(errorimage)) validateErrors.push('Image must start with https and end with .png/.jpeg/.gif/.jpg');
+        if (comment_img && !comment_img.match(errorimage)) validateErrors.push('Image must start with https and end with .png/.jpeg/.gif/.jpg');
 
 
         if (validateErrors.length > 0) {
@@ -34,15 +34,15 @@ function EditComment({ comment, setShowModal, id }) {
         const data = {
             id: id,
             description: description,
-            img: img
+            comment_img: comment_img
         }
 
 
         dispatch(editComments(data, id))
-
+           console.log(data)
             // setShowModal(false)
             // setDescription("");
-            // setImg("")
+            // setcomment_img("")
     
             setErrors([])
 
@@ -77,9 +77,9 @@ function EditComment({ comment, setShowModal, id }) {
                     id="editimageInput"
                     type="text"
                     // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
-                    placeholder="Want to add an image?"
-                    value={img}
-                    onChange={(e) => setImg(e.target.value)}
+                    
+                    value={comment_img}
+                    onChange={(e) => setComment_img(e.target.value)}
                     />
 
             </label>
