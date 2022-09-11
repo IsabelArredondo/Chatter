@@ -1,7 +1,7 @@
 import { useState} from "react"
 import { useDispatch} from "react-redux"
 import { editComments } from '../store/comments'
-
+import './editComment.css'
 
 
 function EditComment({ comment, setShowModal, id }) {
@@ -58,7 +58,7 @@ function EditComment({ comment, setShowModal, id }) {
          <form onSubmit={handleSubmit} className='createUpdate'>
 
             <h3>Edit Comment</h3>
-            <ul> {errors.map((error, i) => (<div className="errors" key={i}>{error}</div>))}</ul>
+             {errors.map((error, i) => (<div className="editerrors" key={i}>{error}</div>))}
 
             <label>
 
