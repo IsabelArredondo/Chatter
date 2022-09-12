@@ -35,7 +35,7 @@ const LoginForm = ({setShowModal}) => {
   return (
     <div className='signUpFormContainer'>
       <i className="fa-solid fa-dove fa-2x login"></i>
-    <div>Sign in to Chatter</div>
+    <div className='signup'>Sign in to Chatter</div>
     <form className='signUpForm' onSubmit={onLogin}>
       
 
