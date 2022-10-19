@@ -14,7 +14,7 @@ function LoginModal() {
         <>
 
             
-            {<button className={'buttonsplash'} onClick={() => setShowModal(true)}>Sign In</button>}
+            {<button id='sign-in' className={'buttonsplash'} onClick={() => setShowModal(true)}>Sign In</button>}
 
 
             {showModal && (

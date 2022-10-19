@@ -11,7 +11,7 @@ const NavBar = () => {
       <div className='NavBar'>
         <div className='dove'>
           <NavLink to='/' exact={true} activeClassName='active'>
-           <i className="fa-solid fa-dove fa-2x home"></i>
+          <i id='birdicon' class="fa-brands fa-twitter fa-3x home"></i>
           </NavLink>
         </div>
         {/* <li>

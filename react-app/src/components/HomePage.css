@@ -6,10 +6,31 @@
 
 .imagehomepage{
     /* height: 1077px; */
-    min-height: 1077px;
+    min-height: 750px;
     width: 55%;
 }
-
+.profilePic{
+    height: 1.5%;
+    width: 1.5%;
+}
+.footer{
+    background-color: transparent;
+    text-decoration: none;
+    color: #657786;
+    font-size: 14px;
+    margin: 10px 105px;
+    
+}
+#bird{
+    position: absolute;
+    margin-left: 16%;
+    margin-top: 13%;
+    font-size: 22rem;
+    color: white;
+}
+.bottom{
+    margin: 5px 0px;
+}
 .signupandlogin {
     color: #1DA1F2;
     padding: 20px;
@@ -22,16 +43,48 @@
     flex-direction: column;
     align-content: center;
 
-    margin-top: 200px;
+    margin-top:45px;
 }
-
+.profile{
+    width: 10%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+#usergmail{
+    color: #475059b0;
+    font-size: 11px;
+    margin-top: 3px;
+}
+.gmail{
+    width: 7%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-left: 33%;
+}
+.signinass{
+    width: min-content;
+    color: #475058;
+    
+}
+#name{
+    font-weight: 700;
+}
+.something{
+    display: flex;
+}
 .buttonsplash{
     border: none;
     border-radius: 20px;
     color: #F5F8FA;
     text-decoration: none;
     text-align: center;
-    margin: 20px 0px;
+    margin: 9px 0px;
     padding: 10px 0px;
     width: 280px;
     font-size: 15px;
@@ -40,7 +93,11 @@
     background-color: #1DA1F2;
     cursor: pointer;
 }
-
+.termsofservice{
+    width: 280px;
+    font-size: 10px;
+    color: #00000094;
+}
 
 
 #one{
@@ -60,38 +117,88 @@
     margin-bottom: 10px;
 }
 
-#three{
-    font-size: 20px;
-    font-family: 'Roboto', Helvetica, sans-serif;
-    font-weight: 900;
-    color: black;
-    margin-left: 125px;
-}
+
 
 #four{
-    font-size: 31px;
+    font-size: 20px;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-weight: bold;
     color: black;
     margin-top: 50px;
     margin-bottom: 10px;
 }
-
-.demoLogin{
-    width: 160px;
-    height: 45px;
-    border-radius: 30px;
-    border: none;
-    background-color: #1DA1F2;
-    color: #F5F8FA;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;
+#sign-in{
+    border: .5px #E1E8ED solid;
+    border-radius: 20px;
+    background-color: transparent;
     text-decoration: none;
-    padding: 10px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    margin-left: 75px;
+    text-align: center;
+    margin: 9px 0px;
+    padding: 10px 0px;
+    width: 280px;
+    font-size: 15px;
+    font-family: 'Roboto' ,Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #1DA1F2;
     cursor: pointer;
 }
+.demoLogin{
+    border: .5px #E1E8ED solid;
+    border-radius: 20px;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px 0px;
+    padding: 10px 0px;
+    width: 280px;
+    font-size: 15px;
+    font-family: 'Roboto' ,Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #1DA1F2;
+    cursor: pointer;
+    
+}
+.signupdemoLogin{
+    border: 0.5px #E1E8ED solid;
+    border-radius: 20px;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: inherit;
+    /* margin: -13px 0px; */
+    margin-top: 26px;
+    padding: 4px 17px;
+    width: 280px;
+    font-size: 13px;
+    font-family: 'Roboto' ,Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #070707;
+    cursor: pointer;
+    
+}
+.orbox{
+    height: 13px;
+    margin: 5px 0px;
+    display: flex;
+    width: 280px;
+  }
+  
+  #three{
+    text-align: center;
+    width: 15%;
+    height: 16px;
+    font-size: 15px;
+    color: black;
+    
+  }
+  .orboxone{
+    width: 50%;
+    height: 8.5px;
+    /* margin-left: 25px; */
+    border-bottom: solid .5px #e1e8edac;
+  }
+  .orboxtwo{
+    width: 50%;
+    
+    height: 8.5px;
+    border-bottom: solid .5px #e1e8edac;
+  }

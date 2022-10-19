@@ -16,7 +16,6 @@ function SignUpModal() {
             
             {<button className={'buttonsplash'} onClick={() => setShowModal(true)}>Sign Up With Email</button>}
 
-
             {showModal && (
 
                 <Modal onClose={() => setShowModal(false)}>

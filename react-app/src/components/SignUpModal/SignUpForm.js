@@ -17,8 +17,14 @@ const SignUpForm = ({setShowModal}) => {
 
   const onSignUp = async (e) => {
     e.preventDefault();
+    const formData = new FormData()
+    formData.append('username', username)
+    formData.append('email', email)
+    formData.append('password', password)
+    formData.append('profileImage', profileImage)
+
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password, profileImage));
+      const data = await dispatch(signUp(formData));
       if (data) {
         setErrors(data)
       }
@@ -51,9 +57,19 @@ const SignUpForm = ({setShowModal}) => {
   const updateRepeatPassword = (e) => {
     setRepeatPassword(e.target.value);
   };
+  // const updateProfileImage = (e) => {
+  //   setProfileImage(e.target.value);
+  // };
+
+
+const allowedTypes = ["png", "jpg", "jpeg", "webp"]
+
   const updateProfileImage = (e) => {
-    setProfileImage(e.target.value);
-  };
+    setErrors([])
+    const file = e.target.files[0];
+    setProfileImage(file)
+  
+}
 
   if (user) {
     
@@ -150,14 +166,16 @@ const SignUpForm = ({setShowModal}) => {
           }
         Optional Profile Image: 
         <input
-          type="url"
-          pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
+          // type="url"
+          // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
           name='profile_image'
-          placeholder='must start with https and end with .jpg/.gif/.png'
-          onChange={updateProfileImage}
-          value={profileImage}
+          // placeholder='must start with https and end with .jpg/.gif/.png'
+          // onChange={updateProfileImage}
+          // value={profileImage}
           className='signupInput'
-
+          type="file"
+          accept="image/*"
+          onChange={updateProfileImage}
         ></input>
  
       </div>
