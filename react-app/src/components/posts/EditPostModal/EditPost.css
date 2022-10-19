@@ -14,13 +14,16 @@
     margin-bottom: 5px;
     border-color: #657786;
     resize: none;
+    outline: none;
 }
 
 #editimageInput{
     
     padding: 5px;
     width: auto;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    resize: none;
+    outline: none;
    
 }
 

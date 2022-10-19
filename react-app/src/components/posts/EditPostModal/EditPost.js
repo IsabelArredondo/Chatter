@@ -88,7 +88,7 @@ const EditPosts = ({ thought, setShowModal, id }) => {
                             
                         />
                          Edit Image:
-                        <input
+                        <textarea
 
                         id="editimageInput"
                         type="text"

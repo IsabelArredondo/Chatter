@@ -55,14 +55,14 @@ function EditComment({ comment, setShowModal, id }) {
         <div className="editnote">
 
 
-         <form onSubmit={handleSubmit} className='createUpdate'>
+         <form onSubmit={handleSubmit} >
 
-            <h3>Edit Comment</h3>
+            {/* <h3>Edit Comment</h3> */}
              {errors.map((error, i) => (<div className="editerrors" key={i}>{error}</div>))}
 
-            <label>
+            <label className='createUpdate'>
 
-
+                Edit Body:
                 <textarea
 
                     id="editcomment"
@@ -71,8 +71,8 @@ function EditComment({ comment, setShowModal, id }) {
                     onChange={(e)=> setDescription(e.target.value)}
                     
                 />
-
-                    <input
+                   Edit Image:
+                    <textarea
 
                     id="editimageInput"
                     type="text"

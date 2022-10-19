@@ -31,7 +31,7 @@ function Comments({ thought, setShowModal, id }) {
     }
 
    
-console.log('Comment section',thought.img)
+
 
 
     return (
@@ -79,10 +79,11 @@ console.log('Comment section',thought.img)
      
      return (
 
+
+
      <div>
       {comment?.post.id === id ?
-                            
-
+                  
             
 
          <div className="Commentscontainer">
@@ -119,21 +120,21 @@ console.log('Comment section',thought.img)
            
            src={comment?.comment_img} />
             : null}
-             
-             {comment?.user.id === user_id && comment?.post?.id === id ?
-                 <span>
+         
+           {comment?.user.id === user_id && comment?.post?.id === id ?
+                 <div className="editanddeletecomment">
 
                 <button className="deleteIconBtn" onClick={removeComment(comment?.id)}><i className="fa-solid fa-trash deleteIconBtn fa-xl"></i></button>
              
                 
                 {/* <EditComment comment={comment} id={comment?.id} /> */}
                 <EditIndex comment={comment} id={comment?.id} />
-                </span>
+                </div>
                : null
-            }
+            }    
+  
             
           </div>
-
 
 
 

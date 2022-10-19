@@ -14,15 +14,15 @@
 }
 
 .gitandLinkedInContainer{
-    border: 1px solid #E1E8ED;
+    border: 1px solid #F5F8FA;
     margin-top: 80px;
-    width: fit-content;
+    width: 372px;
     padding: 16px;
     display: flex;
     margin-left: 26px;
     flex-direction: column;
     border-radius: 10px;
-    background-color: #e1e8edd2;
+    background-color: #F5F8FA;
 }
 
 .whotohire{
@@ -52,8 +52,11 @@
     text-decoration: none;
     margin-bottom: 20px;
     border-radius: 5px;
+    width: 239px;
 }
 
 .sidebarname{
     text-align: center;
+    margin-left: 3px;
+    
 }

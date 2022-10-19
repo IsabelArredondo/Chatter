@@ -14,7 +14,7 @@ const SideBar = () => {
        <div className='gitandLinkedInContainer'>
             <div className='whotohire'>Who to hire</div>
             <a className = {"userLinkedInLink"} href={"https://github.com/IsabelArredondo"} ><i class="fa-brands fa-github gitHubicon"></i> <span className='sidebarname'>Isabel Arredondo</span> </a>
-            <a className = {"userLinkedInLink"} href={"https://www.linkedin.com/in/IsabelArredondo-1107a9186"}><i class="fa-brands fa-linkedin-in linkedInIcon"></i> <span className='sidebarname'>Isabel Arredondo</span></a>
+            <a className = {"userLinkedInLink"} href={"https://www.linkedin.com/in/IsabelArredondo-1107a9186"}><i class="fa-brands fa-linkedin-in linkedInIcon"></i> <span className='sidebarname'>Isabel Arredondo</span> </a>
             
 
         </div>

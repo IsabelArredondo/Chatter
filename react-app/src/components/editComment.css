@@ -2,3 +2,10 @@
     color: #1DA1F2;
     padding-bottom: 10px;
 }
+
+.createUpdate{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}

@@ -2,7 +2,7 @@
     border: 1px solid #AAB8C2;
     padding: 20px;
     margin: 10px;
-    width: 438px;
+    /* width: 438px; */
     /* overflow-y: scroll; */
     /* max-height: 500px; */
     margin-top: 0px;
@@ -10,10 +10,10 @@
 }
 
 .CommentPostContainer{
-    border: #E1E8ED solid 1px;
+    border: #F5F8FA solid 1px;
     padding: 20px;
     margin: 12px;
-    background-color: #E1E8ED;
+    background-color: #F5F8FA;
     border-radius: 5px;
 }
 
@@ -21,9 +21,14 @@
     border: 1px solid #AAB8C2;
     padding: 20px;
     margin: 10px;
-    width: 438px;
+    /* width: 438px; */
     margin-bottom: 0px;
 
+}
+
+.editanddeletecomment{
+    
+    margin-top: 19px;
 }
 
 .overflow{
@@ -31,7 +36,7 @@
     /* max-height: 700px; */
     max-height: 80%;
     overflow-y: scroll;
-    width: auto;
+    width: 601px;
     margin-bottom: 10px;
 }
 
@@ -57,7 +62,7 @@
     border: 1px solid #AAB8C2;
     padding: 20px;
     padding-left: 40px;
-    margin: 10px;
+    margin: 27px;
     width: auto;
 }
 
@@ -67,9 +72,13 @@
 } */
 
 #editcomment{
-    padding: 5px;
-    width: 250px;
+    width: auto;
+    /* margin: 5px; */
+    height: 43px;
+    /* margin-bottom: 5px; */
+    border-color: #657786;
     resize: none;
+    outline: none;
 }
 
 /* .createPostForm{
@@ -137,10 +146,10 @@
     height: auto;
 }
 .feedcommentimage{
-    width: 300px;
+    width: 490px;
     border-radius: 20px;
     margin-left: 24px;
-    margin-top: 28px;
+    /* margin-top: 28px; */
     height: auto;
 
 }
