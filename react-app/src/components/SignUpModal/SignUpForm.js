@@ -15,6 +15,13 @@ const SignUpForm = ({setShowModal}) => {
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
+  const close = (e) => {
+    e.preventDefault();
+
+    setShowModal(false)
+
+  };
+
   const onSignUp = async (e) => {
     e.preventDefault();
     const formData = new FormData()
@@ -76,11 +83,17 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
     return <Redirect to='/feed' />;
   }
 
-  return (
+  return ( 
+    <>      
+    <div>
+      <button className="buttonclose" onClick={close}><i className="fa-solid fa-x"></i></button>
+      </div> 
+
     <div className='signUpFormContainer'>
-      <i className="fa-solid fa-dove fa-2x login"></i>
+      {/* <i className="fa-solid fa-dove fa-2x login"></i> */}
       <div className='signup'>Create your account</div>
       <form className='signUpForm' onSubmit={onSignUp} >
+        Username:
         <div>
           {errors?.username &&
           <div className="error">
@@ -89,7 +102,6 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
               ))}
           </div>
           }
-          Username:
           <input className='signupInput'
             type='text'
             name='username'
@@ -99,6 +111,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
           ></input>
 
         </div>
+      Email:  
       <div>
         {errors?.email &&
           <div className="error">
@@ -107,7 +120,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
             ))}
           </div>
         }
-        Email:
+        
         <input
           type='text'
           name='email'
@@ -117,6 +130,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
           className='signupInput'
         ></input>
       </div>
+      Password:
       <div>
         {errors?.password &&
           <div className="error">
@@ -124,7 +138,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
                 <div key={ind}>{error}</div>
               ))}
           </div>}
-        Password:
+        
         <input
           type='password'
           name='password'
@@ -137,8 +151,9 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
 
 
       </div>
+      Repeat Password:
       <div>
-        Repeat Password:
+        
         <input
           type='password'
           name='repeat_password'
@@ -156,6 +171,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
               ))}
           </div>}
       </div>
+       Optional Profile Image: 
       <div>
          {errors?.profileImage &&
           <div className="error">
@@ -164,7 +180,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
               ))}
           </div>
           }
-        Optional Profile Image: 
+       
         <input
           // type="url"
           // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
@@ -172,7 +188,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
           // placeholder='must start with https and end with .jpg/.gif/.png'
           // onChange={updateProfileImage}
           // value={profileImage}
-          className='signupInput'
+          className=''
           type="file"
           accept="image/*"
           onChange={updateProfileImage}
@@ -182,6 +198,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
       <button className = 'signupBtn' type='submit'>Sign Up</button>
     </form>
     </div>
+    </>
   );
 };
 

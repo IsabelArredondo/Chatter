@@ -1,12 +1,23 @@
 .signUpFormContainer{
-    padding: 10px;
-    width: 300px;
+    padding: 10px 40px;
+    width: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-left: 70px;
 }
-
+.buttonclose{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 12px;
+}
+.buttonclose:hover{
+    border-radius: 50%;
+    background-color: rgba(198, 194, 194, 0.325);
+}
+.signUpForm{
+    display: flex;
+    flex-direction: column;
+}
 .signupInput{
     width: 316px;
     height: 40px;
@@ -60,7 +71,7 @@ h1{
 .signup{
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     padding-bottom: 10px;
     width: 308px;
 }
