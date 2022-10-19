@@ -1,4 +1,3 @@
-import imp
 import os
 from flask import Flask, render_template, request, session, redirect
 from flask_cors import CORS
@@ -17,6 +16,7 @@ from .seeds import seed_commands
 from .config import Config
 
 app = Flask(__name__)
+
 
 # Setup login manager
 login = LoginManager(app)
@@ -48,6 +48,9 @@ CORS(app)
 # Therefore, we need to make sure that in production any
 # request made over http is redirected to https.
 # Well.........
+
+
+
 @app.before_request
 def https_redirect():
     if os.environ.get('FLASK_ENV') == 'production':

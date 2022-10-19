@@ -26,4 +26,4 @@ class SignUpForm(FlaskForm):
         'username', validators=[DataRequired(message="Please Provide User Name"), Length(min=1, max=15, message="Username should be between 1 and 15 characters"), username_exists])
     email = StringField('email', validators=[DataRequired(message="Please Provide Email"), Email(), user_exists])
     password = StringField('password', validators=[DataRequired(message="Please Provide Password"), Length(min=5, max=15, message="Password should be between 5 and 15 characters")])
-    profileImage = StringField('profileImage')
+    # profileImage = StringField('profileImage')
