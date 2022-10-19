@@ -36,7 +36,7 @@
 }
 
 .signupBtn{
-    width: 160px;
+    width: 324px;
     height: 45px;
     border-radius: 30px;
     border: none;
@@ -48,9 +48,9 @@
     text-align: center;
     text-decoration: none;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 46px;
     margin-bottom: 10px;
-    margin-left: 65px;
+    /* margin-left: 65px; */
     cursor: pointer;
 }
 
@@ -107,7 +107,7 @@ h1{
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     text-align: center;
     width: 308px;
 }

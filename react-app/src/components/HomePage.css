@@ -181,7 +181,16 @@
     display: flex;
     width: 280px;
   }
-  
+  #page{
+    
+    margin: 5px;
+    margin-top: 65px;
+  }
+  .backbutton{
+    padding: 10px;
+    font-size: 25px;
+    color: #1DA1F2;
+  }
   #three{
     text-align: center;
     width: 15%;
