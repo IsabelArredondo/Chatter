@@ -1,5 +1,5 @@
 .signUpFormContainer{
-    padding: 10px 40px;
+    padding: 10px 100px;
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,10 @@
     cursor: pointer;
     padding: 10px 12px;
 }
+.signuplink{
+    color: #1DA1F2;
+    text-decoration: none;
+}
 .buttonclose:hover{
     border-radius: 50%;
     background-color: rgba(198, 194, 194, 0.325);
@@ -17,6 +21,7 @@
 .signUpForm{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 .signupInput{
     width: 316px;
@@ -60,6 +65,7 @@
 
 .login{
     color: #1DA1F2;
+    margin-left: 47%
 }
 
 h1{
@@ -67,11 +73,48 @@ h1{
     font-weight: bold;
     
 }
-
+#logincomponent{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 320px;
+}
+.box{
+    margin: 60px 0px;
+}
+.loginbutton{
+    width: 324px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: #000000c8;
+    color: #F5F8FA;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* margin-left: 32px; */
+    cursor: pointer;
+}
+.loginbutton:hover{
+    color: #000000c8;
+    background-color: #cccecf;
+}
 .signup{
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 25px;
     padding-bottom: 10px;
+    text-align: center;
     width: 308px;
+}
+
+.orboxlogin{
+    height: 13px;
+    margin: 10px 0px;
+    display: flex;
+    width: 324px;
 }

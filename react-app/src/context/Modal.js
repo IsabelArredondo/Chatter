@@ -30,6 +30,8 @@ export function Modal({ onClose, children }) {
     <div id="modal">
       <div id="modal-background" onClick={onClose} />
       <div id="modal-content">
+      <button className="buttonclose" onClick={onClose}><i className="fa-solid fa-x"></i></button>
+
         {children}
       </div>
     </div>,

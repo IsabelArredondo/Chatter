@@ -86,7 +86,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
   return ( 
     <>      
     <div>
-      <button className="buttonclose" onClick={close}><i className="fa-solid fa-x"></i></button>
+      {/* <button className="buttonclose" onClick={close}><i className="fa-solid fa-x"></i></button> */}
       </div> 
 
     <div className='signUpFormContainer'>
@@ -195,7 +195,7 @@ const allowedTypes = ["png", "jpg", "jpeg", "webp"]
         ></input>
  
       </div>
-      <button className = 'signupBtn' type='submit'>Sign Up</button>
+      <button  className = 'signupBtn' type='submit'>Sign Up</button>
     </form>
     </div>
     </>
