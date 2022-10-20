@@ -1,0 +1,29 @@
+#logout{
+    width: 259px;
+    height: 57px;
+    border-radius: 46px;
+    margin-left: 77px;
+    margin-top: 160px;
+    border: none;
+}
+#logout:hover{
+    background-color: #57575745;
+
+}
+#logoutpic{
+    width: 20%;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+#logoutinfo{
+    padding-top: 5px;
+}
+.logicon{
+    padding-top: 5%;
+    font-size: 1.1rem;
+    padding-left: 10%;
+}

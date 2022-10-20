@@ -1,61 +1,64 @@
-.dove{
- padding: 5px;
- width: 60px;
- height: 60px;
-}
+
 .home{
     color: #1DA1F2;
-   padding: 15px;
- 
+    margin: 0px 76px;
+    font-size: 2rem;
+    padding: 10px;
 }
 .home:hover{
     
-    border-radius: 60%;
-    background-color: #1da0f253;
+    border-radius: 50%;
+    background-color: #bbe1f853;
     
 }
 
 .NavBar{
-    width: 200px;
-    height: 700px;
+    padding: 15px;
+    width: 100%;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     /* border: 1px solid black; */
     margin-right: 10px;
 }
 .logout{
-    width: 160px;
+    width: 130px;
     padding: 15px;
     border-radius: 30px;
     border: none;
-    background-color: #1DA1F2;
-    color: #F5F8FA;
+    background-color: transparent;
+    color: #040404;
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
     font-size: 17px;
     text-align: center;
     text-decoration: none;
-    margin-top: 639px;
     cursor: pointer;
+ 
+}
+.logout:hover{
+    background-color: #57575745;
 }
 
 .sidebarhome{
-    width: 160px;
-    height: 50px;
+    width: 107px;
+    padding: 15px;
     border-radius: 30px;
     border: none;
-    background-color: #1DA1F2;
-    color: #F5F8FA;
-    font-family: Helvetica, Arial,  sans-serif;
-    font-weight: bold;
-    font-size: 17px;
-    text-align: left;
+    background-color: transparent;
+    color: #040404;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
     text-decoration: none;
-    margin-top: 50px;
-    
+    cursor: pointer;
+    margin: 20px 76px;
+}
+.sidebarhome:hover{
+    background-color: #57575745;
+
 }
 
-.fa-house{
+/* .fa-house{
     border: none;
     width: 25px;
     height: 25px;
@@ -63,25 +66,35 @@
     margin-right: 5px;
     margin-left: 5px;
     
-}
+} */
 
 .NavLogOut {
     padding: 20px;
     display: grid;
     
 }
-
+#icons{
+    margin-right: 10px;
+}
+#icon{
+    margin-right: 10px;
+}
+#homeicon{
+    width: 100px;
+}
 .Profilebutton{
-    width: 130px;
+    width: 100px;
     padding: 15px;
     border-radius: 30px;
     border: none;
-    background-color: #1DA1F2;
-    color: #F5F8FA;
+    margin: 20px 76px;
+    color: #000000;
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
-    margin-top: 30px;
+}
+
+.Profilebutton:hover{
+     background-color: #57575745;
 }
