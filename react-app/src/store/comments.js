@@ -127,7 +127,6 @@ const commentsReducer = (state = initialState, action) => {
 
         
         case DELETE: {
-              console.log(state?.comments)
             let newComment = state?.comments?.filter(comment => { return comment?.id !== action?.id})
   
                newState = {...state, comments:[...newComment]}

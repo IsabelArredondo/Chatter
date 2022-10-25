@@ -39,7 +39,6 @@ function EditComment({ comment, setShowModal, id }) {
 
 
         dispatch(editComments(data, id))
-           console.log(data)
             // setShowModal(false)
             // setDescription("");
             // setcomment_img("")
