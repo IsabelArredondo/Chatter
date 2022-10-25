@@ -19,12 +19,13 @@ const CreatePosts = () => {
 
 
     const handleSubmit = async (e) => {
-
+        e.preventDefault()
         const formData = new FormData()
         formData.append('description', description)
         formData.append('img', img)
 
-        e.preventDefault()
+
+
         let validateErrors = [];
         // let errorimage = /^http[^ \!@\$\^&\(\)\+\=]+(\.png|\.jpeg|\.gif|\.jpg)$/;
 
