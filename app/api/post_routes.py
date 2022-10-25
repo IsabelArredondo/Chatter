@@ -49,7 +49,7 @@ def create_post():
       
     if "img" not in request.files:
       return {"errors": ["image required"]}, 400
-
+#  hello
     img = request.files["img"]
 
     if not allowed_file(img.filename):
