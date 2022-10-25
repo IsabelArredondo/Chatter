@@ -23,7 +23,6 @@ const LogoutButton = () => {
       return () => document.removeEventListener("click", closeMenu);
   }, [showMenu])
 
-  console.log(user)
   const dispatch = useDispatch()
   const onLogout = async (e) => {
     await dispatch(logout());

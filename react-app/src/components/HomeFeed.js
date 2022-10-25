@@ -45,7 +45,6 @@ function Feed() {
                     </div>
 
                     {thoughts?.map((thought) => {
-                      console.log(thought?.img)
                         return (
 
 

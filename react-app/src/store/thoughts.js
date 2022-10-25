@@ -88,7 +88,7 @@ export const createThought = (formData) => async (dispatch) => {
     });
 
     if (response.ok) {
-    const newThought = await response;
+    const newThought = await response.json();
     dispatch(createThoughts(newThought));
     return newThought
     } 
