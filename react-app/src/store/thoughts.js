@@ -79,12 +79,12 @@ export const allThoughts = () => async(dispatch) => {
 //     }
 // }
 
-export const createThought = (data) => async (dispatch) => {
+export const createThought = (formData) => async (dispatch) => {
 
     const response = await fetch('/posts/post', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        // headers: { 'Content-Type': 'application/json' },
+        body: formData
     });
 
     if (response.ok) {

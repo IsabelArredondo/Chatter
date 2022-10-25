@@ -39,7 +39,7 @@ function Feed() {
             <div className='postcontainer'>
                 <NavBar />
                 <div className='Wrapper'>
-                    <h1>Home</h1>
+                    <h2>Home</h2>
                     <div className='createPost'>
                         <CreatePosts />
                     </div>
