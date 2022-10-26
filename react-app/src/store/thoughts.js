@@ -153,7 +153,7 @@ export const editThought = (data, id) => async (dispatch) => {
 
                 newState = {...state}
 
-                newState[action?.payload?.id] = action?.payload
+                newState[action?.payload?.response?.id] = action?.payload?.response
 
                 return newState;
                 

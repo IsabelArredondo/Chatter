@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired
 
 class PostForm(FlaskForm):
     description = TextAreaField('description',validators=[DataRequired(message="Description is required")])
-    img = StringField('img')
+    # img = StringField('img')
     
