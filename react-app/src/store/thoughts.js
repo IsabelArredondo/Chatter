@@ -81,7 +81,7 @@ export const allThoughts = () => async(dispatch) => {
 
 export const createThought = (formData) => async (dispatch) => {
 
-    const response = await fetch('/posts/post', {
+    const response = await fetch(`/posts/post`, {
         method: 'POST',
         // headers: { 'Content-Type': 'application/json' },
         body: formData
@@ -90,7 +90,7 @@ export const createThought = (formData) => async (dispatch) => {
     if (response.ok) {
     const newThought = await response.json();
     dispatch(createThoughts(newThought));
-    // return newThought
+    return newThought
     } 
     
 };

@@ -79,11 +79,12 @@ def create_post():
         )
         db.session.add(post)
         db.session.commit()
-        response = post.to_dict()
+        # response = post.to_dict()
         
 
-        return response
-    return {'errors': form.errors}, 401
+        return {'response': post.to_dict()}
+        # return response
+    return {'errors': form.errors}, 400
 
 
 

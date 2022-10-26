@@ -9,7 +9,7 @@ const CreatePosts = () => {
 
     const dispatch = useDispatch()
     const [description, setDescription] = useState('');
-    const [img, setImg] = useState();
+    const [img, setImg] = useState(null);
     const [errors, setErrors] = useState([]);
 
 
@@ -57,12 +57,11 @@ const CreatePosts = () => {
 
         setErrors([]);
         setDescription("");
-        setImg()
+        setImg(null)
 
     }
 
     const updateImg = (e) => {
-        setErrors([])
         const file = e.target.files[0];
         setImg(file)
 
@@ -108,22 +107,17 @@ const CreatePosts = () => {
                         </div>
                     </span>
                         <div className="border">
-
+                          <div>
+                          <label for='select-image' >
+                          <i class="fa-solid fa-image"></i>
+                          </label>
                             <input
-  
-
-                                // type="url"
-                                // pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)"
-                                name='img'
                                 id="select-image"
-                                // placeholder='must start with https and end with .jpg/.gif/.png'
-                                // onChange={updateProfileImage}
-                                // value={profileImage}
                                 type="file"
                                 accept="image/jpg, image/jpeg, image/gif, image/png"
                                 onChange={updateImg}
                             />
-
+                         </div>
 
                             <button className='PostButton' type="submit" >Post</button>
                         </div>
