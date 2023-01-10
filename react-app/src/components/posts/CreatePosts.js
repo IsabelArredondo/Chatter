@@ -40,17 +40,6 @@ const CreatePosts = () => {
             return;
         }
 
-
-
-
-        // const data = {
-
-        //     description,
-        //     img
-
-        // };
-
-
         dispatch(createThought(formData))
         // console.log(data)
 
@@ -61,48 +50,48 @@ const CreatePosts = () => {
 
     }
 
-    // const updateImg = (e) => {
-    //     const file = e.target.files[0];
-    //     setImg(file)
-
-    // }
-    function isImgUrl(url) {
-        const img = new Image();
-        img.src = url;
-        return new Promise((resolve) => {
-            img.onerror = () => resolve(false);
-            img.onload = () => resolve(true);
-        });
-    }
-
-    const allowedTypes = ["png", "jpg", "jpeg", "webp"]
-
     const updateImg = (e) => {
-        setErrors([])
-
         const file = e.target.files[0];
-        if (file) {
-            const fileType = allowedTypes.find((type) => {
-                return file.type.includes(type)
-            })
+        setImg(file)
 
-            if (fileType) {
-                const reader = new FileReader()
-                reader.onload = async () => {
-                    if (reader.readyState === 2) {
-                        if ( await isImgUrl(reader.result) ) {
-                            setImg(file)
-                        } else {
-                            setErrors(['Invalid image'])
-                        }
-                    }
-                }
-                reader.readAsDataURL(file)
-            } else {
-                setErrors(['Not a valid image file type'])
-            }
-        }
     }
+    // function isImgUrl(url) {
+    //     const img = new Image();
+    //     img.src = url;
+    //     return new Promise((resolve) => {
+    //         img.onerror = () => resolve(false);
+    //         img.onload = () => resolve(true);
+    //     });
+    // }
+
+    // const allowedTypes = ["png", "jpg", "jpeg", "webp"]
+
+    // const updateImg = (e) => {
+    //     setErrors([])
+
+    //     const file = e.target.files[0];
+    //     if (file) {
+    //         const fileType = allowedTypes.find((type) => {
+    //             return file.type.includes(type)
+    //         })
+
+    //         if (fileType) {
+    //             const reader = new FileReader()
+    //             reader.onload = async () => {
+    //                 if (reader.readyState === 2) {
+    //                     if ( await isImgUrl(reader.result) ) {
+    //                         setImg(file)
+    //                     } else {
+    //                         setErrors(['Invalid image'])
+    //                     }
+    //                 }
+    //             }
+    //             reader.readAsDataURL(file)
+    //         } else {
+    //             setErrors(['Not a valid image file type'])
+    //         }
+    //     }
+    // }
 
     return (
         <>
@@ -145,11 +134,11 @@ const CreatePosts = () => {
                     </span>
                         <div className="border">
                           <div>
-                          <label for='select-image' >
+                          <label for='file' >
                           <i class="fa-solid fa-image"></i>
                           </label>
                             <input
-                                id="select-image"
+                                id="file"
                                 type="file"
                                 accept="image/jpg, image/jpeg, image/gif, image/png"
                                 onChange={updateImg}
